@@ -4,20 +4,20 @@ import { ResponseFetchUsers } from "./Services";
 export const clientList: ResponseFetchUsers[] = [
   {
     id: 1,
-    page: "Marketing",
-    description: "This is the marketing team",
+    page: "Account",
+    description: "Sales Lledger",
     status: "live",
   },
   {
     id: 2,
-    page: "Branding",
-    description: "This the company's brand",
+    page: "Administration",
+    description: "HR training",
     status: "draft",
   },
   {
     id: 3,
-    page: "Pricing",
-    description: "Prices for different subscriptions",
+    page: "Procurement",
+    description: "Lists of items",
     status: "error",
   },
 ];

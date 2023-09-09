@@ -72,3 +72,8 @@
 .label-error {
   background-color: #d9534f;
 }
+/* @media screen and (max-width: 860px) {
+  .delete {
+    margin-top: 10px;
+  }
+} */

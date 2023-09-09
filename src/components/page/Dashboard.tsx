@@ -34,14 +34,14 @@ export const Dashboard = () => {
   };
   return (
     <Layout title="Admin Dashboard" description="">
-      <div className="bg-white">
-        <div className="flex justify-between px-10 pt-5">
+      <div className="bg-white py-5">
+        <div className="flex justify-between lg:px-10 pt-5 addBtn">
           <div></div>
           <Button
             onClick={() => setModalOpen(true)}
             className="btn px-5 bg-slate-950 rounded-md text-white h-[35px]"
           >
-            Add
+            Add Project
           </Button>
         </div>
         <DashboardTable
