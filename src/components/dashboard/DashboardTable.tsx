@@ -5,8 +5,8 @@ import { Button } from "antd";
 export const DashboardTable = ({ rows, deleteRow, editRow }) => {
   return (
     <div className="my-10 lg:px-10 ">
-      <div className="w-full px-3 py-4 mb-5 grid grid-cols-6 rounded-[8px] rounded-b-none border-b-2 border border-x-0 border-t-0 border-[#032282] bg-sky-100 font-semibold text-[14px]">
-        <span>Subject</span>
+      <div className="w-full px-3 py-4 mb-5 table-header grid grid-cols-6 rounded-[8px] rounded-b-none border-b-2 border border-x-0 border-t-0 border-[#032282] bg-sky-100 font-semibold text-[14px]">
+        <span className="">Subject</span>
         <span>Description</span>
         <span>Status</span>
         <span> Start Date</span>

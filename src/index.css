@@ -146,11 +146,14 @@ body::-webkit-scrollbar-thumb {
     padding-right: 5px;
   }
   .list span {
-    font-size: 10px;
+    font-size: 8px;
   }
   .addBtn {
     padding-right: 20px;
     
+  }
+  .table-header{
+    font-size: 10px;
   }
 }
 
