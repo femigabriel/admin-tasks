@@ -5,10 +5,12 @@ import { Button } from "antd";
 export const DashboardTable = ({ rows, deleteRow, editRow }) => {
   return (
     <div className="my-10 lg:px-10 ">
-      <div className="w-full px-3 py-4 mb-5 grid grid-cols-4 rounded-[8px] rounded-b-none border-b-2 border border-x-0 border-t-0 border-[#032282] bg-sky-100 font-semibold text-[14px]">
+      <div className="w-full px-3 py-4 mb-5 grid grid-cols-6 rounded-[8px] rounded-b-none border-b-2 border border-x-0 border-t-0 border-[#032282] bg-sky-100 font-semibold text-[14px]">
         <span>Subject</span>
         <span>Description</span>
         <span>Status</span>
+        <span> Start Date</span>
+        <span> End Date</span>
         <span> Actions</span>
       </div>
       <div className=" cursor-pointer text-[12px] font-semibold">
@@ -18,7 +20,7 @@ export const DashboardTable = ({ rows, deleteRow, editRow }) => {
           return (
             <div
               key={index}
-              className="grid grid-cols-4  lg:px-3 list text-[#888] border border-x-0 border-t-0 border-gray-200 "
+              className="grid grid-cols-6  lg:px-3 list text-[#888] border border-x-0 border-t-0 border-gray-200 "
             >
               <span className="mt-4">{list.page}</span>
               <span className="expand  mt-4">{list.description}</span>
@@ -27,6 +29,8 @@ export const DashboardTable = ({ rows, deleteRow, editRow }) => {
                   {statusText}
                 </span>
               </div>
+              <span className="expand  mt-4">{list.start}</span>
+              <span className="expand  mt-4">{list.end}</span>
               <div className="flex ">
                 <button className="lg:mr-2 bg-red-200 delete h-[25px] px-2 rounded-md mt-1 ">
                   <DeleteOutlined

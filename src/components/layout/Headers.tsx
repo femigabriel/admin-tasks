@@ -52,7 +52,7 @@ export const Headers = (props: AuthList) => {
         <a href="/" className="login-link flex">
           <img src="./assets/icons/category-2.svg" className="mt-2" />
           <span className="text-[16px] font-semibold mx-3 mt-2">
-            Analytics Dashboard
+            Admin Dashboard
           </span>
         </a>
       ),

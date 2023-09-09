@@ -7,13 +7,13 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
     defaultValue || {
       page: "",
       description: "",
-      status: "live",
+      status: "active",
     }
   );
   const [errors, setErrors] = useState("");
 
   const validateForm = () => {
-    if (formState.page && formState.description && formState.status) {
+    if (formState.page && formState.description && formState.status && formState.start && formState.end) {
       setErrors("");
       return true;
     } else {
@@ -70,12 +70,34 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
               onChange={handleChange}
               value={formState.status}
             >
-              <option value="live">live</option>
-              <option value="draft">draft</option>
-              <option value="error">Error</option>
+              <option value="active">Active</option>
+              <option value="pending">Pending</option>
+              <option value="complete">Completed</option>
             </select>
           </div>
+          <div className="flex">
+          <div className="form-group mr-3">
+            <label htmlFor="status">Task Deadline
+            <span className="text-[11px]"> (Start date)</span>
+            </label>
+            <input type="date"  value={formState.start}
+               name="start"
+               onChange={handleChange}
+            />
+            </div>
+            <div className="form-group ml-3">
+            <label htmlFor="status">Task Deadline
+            <span className="text-[11px]"> (End date)</span>
+           </label>
+            <input type="date"  value={formState.end}
+               name="end"
+               onChange={handleChange}
+            />
+            </div>
+          </div>
+
           {errors && <div className="error">{`Please include: ${errors}`}</div>}
+      
           <button type="submit" className="bg-[#032282] text-white px-5 h-[45px] rounded-md" onClick={handleSubmit}>
             Submit
           </button>

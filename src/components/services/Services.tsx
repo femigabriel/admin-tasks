@@ -31,4 +31,6 @@ export type ResponseFetchUsers = {
   id: number;
   page: string;
   description: string;
+  start: string;
+  end: string;
 };
